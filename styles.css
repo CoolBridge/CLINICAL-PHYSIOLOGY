@@ -1,0 +1,288 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/background.jpeg'); /* Background image for the entire website */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to bottom right, #6a9bd1, #050b0f);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    position: relative; /* Added for positioning the logo */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Logo Styles */
+.logo {
+    position: absolute;
+    top: 10px; /* Adjusts the position from the top */
+    left: 10px; /* Adjusts the position from the left */
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Marquee Styles */
+.marquee {
+    background: #f9f9f9;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 60s linear infinite; /* Increased duration for slower speed */
+    font-weight: bold; /* Makes the text bold */
+}
+
+@keyframes marquee {
+    0% { transform: translate(100%, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* Courses Section Styles */
+.courses {
+    position: relative; /* Required for positioning */
+    background-image: url('courses-background.jpeg'); /* Replace with your specific courses section image path */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    padding: 40px 20px; /* Adds padding for better spacing */
+    color: rgb(16, 15, 15); /* Change text color to improve visibility */
+}
+
+/* Removed the dark overlay */
+.courses h2 {
+    position: relative; /* To position the heading */
+    z-index: 2; /* Ensures heading is above the background */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.course-list {
+    position: relative; /* To position the text above the background */
+    z-index: 2; /* Ensures text is above the background */
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 20px; /* Space between course cards */
+}
+
+.course-card {
+    background: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    position: relative;
+    text-align: left; /* Align text to the left */
+}
+
+.course-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.course-description {
+    display: none; /* Initially hide descriptions */
+}
+
+.course-card:hover .course-description {
+    display: block; /* Show description on hover */
+}
+
+/* Blog Section Styles */
+.blog {
+    background: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.blog h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.blog-marquee {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.blog-item {
+    display: inline-block;
+    padding: 20px;
+    background: #ffffff;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 300px;
+    transition: transform 0.3s;
+}
+
+.blog-item:hover {
+    transform: scale(1.05);
+}
+
+.blog-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.blog-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.blog-item a:hover {
+    text-decoration: underline;
+}
+
+@keyframes blog-marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.blog-marquee {
+    animation: blog-marquee 30s linear infinite;
+}
+
+/* Electrocardiography Section Styles */
+.electrocardiography {
+    background: linear-gradient(to bottom right, #f1f1f1, #d9edf7);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.ec-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.ec-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    position: relative;
+}
+
+.ec-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ec-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #6a9bd1;
+}
+
+.ec-content {
+    padding: 20px;
+}
+
+.ec-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #6a9bd1;
+}
+
+.ec-content p {
+    font-size: 1em;
+    color: #666;
+}
+
+.details-button {
+    background: #6a9bd1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.details-button:hover {
+    background: #5283b1;
+}
+
+/* Footer Styles */
+footer {
+    background: #6a9bd1; /* Footer background color */
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #25D366; /* WhatsApp color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.whatsapp-button:hover {
+    background: #128C7E; /* Darker shade on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .courses h2 {
+        font-size: 1.5em;
+    }
+
+    .blog-item {
+        min-width: 200px;
+    }
+
+    .ec-cards {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
+    }
+}
